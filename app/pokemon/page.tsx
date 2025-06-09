@@ -32,7 +32,7 @@ export default async function PokemonListPage({ searchParams }: PageProps) {
 	// console.log("Pokemons:", pokemons);
 
 	return (
-		<Box justifyItems="center">
+		<Box justifyItems="center" padding={5} paddingBottom={10}>
 			<PokemonGrid pokemons={pokemons} />
 			<PokemonPagination
 				totalPages={totalPages}

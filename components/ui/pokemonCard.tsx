@@ -10,7 +10,7 @@ interface PokemonCardProps {
 
 export function PokemonCard({ id, name, image }: PokemonCardProps) {
 	return (
-		<Link href={`/pokemon/${id}`}>
+		<Link href={`/pokemon/${id}`} textDecoration="none">
 			<Card.Root cursor="pointer" variant="subtle">
 				<Card.Body>
 					<Stack align="center">

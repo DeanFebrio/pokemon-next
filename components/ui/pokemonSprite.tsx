@@ -20,7 +20,7 @@ export function PokemonSprite({ sprites }: PokemonSpriteProps) {
 		{ label: "Back Shiny", src: sprites.back_shiny },
 		{ label: "Back Shiny Female", src: sprites.back_shiny_female },
 	].filter((x) => x.src !== null);
-    // console.log(spriteArray);
+	// console.log(spriteArray);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const totalSprites = spriteArray.length;
 
@@ -37,7 +37,9 @@ export function PokemonSprite({ sprites }: PokemonSpriteProps) {
 				<IconButton onClick={handlePrev}>
 					<HiOutlineChevronLeft />
 				</IconButton>
-				{totalSprites > 0 && <Image src={spriteArray[currentIndex].src} height="110px"/>}
+				{totalSprites > 0 && (
+					<Image src={spriteArray[currentIndex].src} height="110px" />
+				)}
 				<IconButton onClick={handleNext}>
 					<HiOutlineChevronRight />
 				</IconButton>

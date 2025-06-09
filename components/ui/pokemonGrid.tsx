@@ -11,9 +11,8 @@ export function PokemonGrid({ pokemons }: PokemonGridProps) {
 		<Grid
 			templateColumns={{
 				base: "1fr",
-				sm: "repeat(2, 1fr)",
-				md: "repeat(3, 1fr)",
-				lg: "repeat(4, 1fr)",
+				sm: "repeat(3, 1fr)",
+				lg: "repeat(5, 1fr)",
 			}}
 			gap={{ base: 4, sm: 6, md: 8, lg: 10 }}
             padding={{ base: 4, sm: 6, md: 8, lg: 10 }}

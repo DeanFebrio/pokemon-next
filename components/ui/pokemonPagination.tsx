@@ -25,7 +25,7 @@ export const PokemonPagination = ({
 	};
 
 	return (
-		<Pagination.Root count={totalPages} pageSize={1} defaultPage={1}>
+		<Pagination.Root count={totalPages} pageSize={1} defaultPage={currentPage}>
 			<ButtonGroup variant="outline" colorPalette="teal" gap="4" size="sm">
 				<Pagination.PrevTrigger asChild>
 					<IconButton onClick={() => handlePageChange(currentPage - 1)}>

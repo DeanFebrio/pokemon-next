@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { PokemonGrid } from "@/components/ui/pokemonGrid";
 import { PokemonPagination } from "@/components/ui/pokemonPagination";
 import { getPokemonId, getPokemonImage, getPokemonList } from "@/lib/api";
@@ -32,12 +33,12 @@ export default async function PokemonListPage({ searchParams }: PageProps) {
 	// console.log("Pokemons:", pokemons);
 
 	return (
-		<Box justifyItems="center" padding={5} paddingBottom={10}>
-			<PokemonGrid pokemons={pokemons} />
-			<PokemonPagination
-				totalPages={totalPages}
-				currentPage={currentPage}
-			/>
+		<Box>
+			<Header />
+			<Box justifyItems="center" padding={5} paddingBottom={10}>
+				<PokemonGrid pokemons={pokemons} />
+				<PokemonPagination totalPages={totalPages} currentPage={currentPage} />
+			</Box>
 		</Box>
 	);
 }

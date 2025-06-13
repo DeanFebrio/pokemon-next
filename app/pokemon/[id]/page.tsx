@@ -46,7 +46,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 			alignContent="center"
 			p={4}
 		>
-			<Link href={`/pokemon?page=${page}`} style={{ textDecoration: "none" }}>
+			<Link href={`/pokemon?page=${page}`} style={{ textDecoration: "none" }} position="start">
 				<Button size="xs" variant="ghost">
 					<HiOutlineArrowCircleLeft />
 					Back to Gallery
@@ -78,6 +78,8 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 										alt={pokemon.name}
 										boxSize={{ sm: "200px", md: "250px", lg: "300px" }}
 										objectFit="contain"
+										_hover={{ transform: "scale(1.1)" }}
+										transition="transform 0.3s ease-in-out"
 									/>
 									<PokemonSprite sprites={pokemon.sprites} />
 								</Stack>

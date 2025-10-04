@@ -10,9 +10,7 @@ interface PageProps {
 }
 
 export default async function PokemonListPage({ searchParams }: PageProps) {
-	const pageParam = Array.isArray(searchParams.page)
-		? searchParams.page[0]
-		: searchParams.page;
+	const pageParam = searchParams.page;
 
 	const currentPage = parseInt(pageParam ?? "1", 10);
 	const limit = 20;
@@ -30,7 +28,6 @@ export default async function PokemonListPage({ searchParams }: PageProps) {
 			image: getPokemonImage(id),
 		};
 	});
-	// console.log("Pokemons:", pokemons);
 
 	return (
 		<Box>

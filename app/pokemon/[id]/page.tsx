@@ -26,7 +26,8 @@ interface PageProps {
 export async function generateMetaData({
 	params,
 }: PageProps): Promise<Metadata> {
-	const pokemon = await getPokemonDetail(params.id);
+	const pokemonId = await params.id;
+	const pokemon = await getPokemonDetail(pokemonId);
 	return {
 		title: `${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`,
 		description: `Details about ${
@@ -46,6 +47,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 			alignContent="center"
 			p={4}
 		>
+			hhh
 			<Link href={`/pokemon?page=${page}`} style={{ textDecoration: "none" }} position="start">
 				<Button size="xs" variant="ghost">
 					<HiOutlineArrowCircleLeft />

@@ -41,6 +41,8 @@ export function PokemonCard({ id, name, image }: PokemonCardProps) {
 								objectFit="contain"
 								_hover={{ transform: "scale(1.2)" }}
 								transition="transform 0.3s ease-in-out"
+								onLoad={() => setLoading(false)}
+								onError={() => setLoading(false)}
 							/>
 						</Skeleton>
 						<Badge variant="outline" padding="5px">
